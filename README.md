@@ -4,12 +4,12 @@ Make Split Archive Instructions:
 1. create an empty parent folder
 2. put function.zip into another empty directory in that parent directory
 3. unzip the function.zip (in the directory inside the other directory)
-3. go back to the parent directory
-4. run: 
+4. go back to the parent directory
+5. run: 
 ```
 zip -r -s 15m function.zip NAME_OF_DIRECTORY/
 ```
-5. contents of parent directory should now look like this
+6. contents of parent directory should now look like this
 ```
 function_old.zip  function.z01  function.z02  function.zip  NAME_OF_DIRECTORY
 ```
