@@ -1,12 +1,12 @@
 # linux_make_split_zip_archive_multiple_small_parts_for_AWS
 
-# Making and Restoring a 2 part zip archive 
+## Making and Restoring a 2 part zip archive (from an original zip archive)
 
 e.g. for splitting an AWS-Lambda function python env into smaller pieces
 
 https://linuxconfig.org/how-to-split-zip-archive-into-multiple-blocks-of-a-specific-size 
 
-### These are instructions for taking an already existing function.zip archive (file) and breaking it into smaller files (and then for reassembling them). 
+### These are instructions for taking an already existing function.zip archive (file) and breaking it into smaller files (and then for reassembling them). (These instructions can be modified for use on a unzipped folder as well.) 
 
 ## Make Split Archive Instructions:
 1. Create an empty parent directory (folder).
@@ -17,6 +17,11 @@ https://linuxconfig.org/how-to-split-zip-archive-into-multiple-blocks-of-a-speci
 ```
 zip -r -s 15m split_function.zip *
 ```
+(Note: if you want to zip a directory from the parent directory use:
+```
+zip -r -s 15m split_function.zip NAME_OF_DIRECTORY/
+```
+but you do not want that for AWS in this case.)
 6. The contents of parent directory should now look like this:
 ```
 split_function.z02        
