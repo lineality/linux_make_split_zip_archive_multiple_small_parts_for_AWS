@@ -1,5 +1,4 @@
 # linux_make_split_zip_archive_multiple_small_parts_for_AWS
-
 # Making and Restoring a 2 part zip archive 
 e.g. for splitting an AWS-Lambda function python env into smaller pieces
 
@@ -20,20 +19,22 @@ function_old.zip  function.z01  function.z02  function.zip  NAME_OF_DIRECTORY
 ```
 
 ## Restore instructions:
-1. put these files
+1. Put these files
 ```
 function_old.zip  function.z01  function.z02  function.zip
 ```
-into an empty directory
+into an empty directory.
 2. run: 
 ```
 zip -F function.zip --out single-function.zip
 ```
-3. remove the 
+3. Remove the 
 ```
 single-function.zip
 ``` 
- file, rename it as: 
+ file.
+
+4. Rename it as: 
 ```
 function.zip
 ``` 
