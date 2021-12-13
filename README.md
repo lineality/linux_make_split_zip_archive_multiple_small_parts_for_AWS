@@ -1,5 +1,13 @@
 # linux_make_split_zip_archive_multiple_small_parts_for_AWS
 
+#### Cheat Sheet
+```
+Make Splits: zip -r -s 15m function_split.zip *
+
+Rejoin: zip -F function_split.zip --out function.zip
+
+```
+
 ## Making and Restoring a 2 part zip archive (from an original zip archive)
 
 e.g. for splitting an AWS-Lambda function python env into smaller pieces
