@@ -5,7 +5,6 @@
 Make Splits: zip -r -s 15m function_split.zip *
 
 Rejoin: zip -F function_split.zip --out function.zip
-
 ```
 
 ## Making and Restoring a 2 part zip archive (from an original zip archive)
